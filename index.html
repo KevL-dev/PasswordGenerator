@@ -4,12 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Password Generator</title>
   </head>
   <body>
     <main>
-      <div></div>
+      <div class="top-div">
+        <h2>Generated password</h2>
+        <label id="password-display"
+          >Click 'Generate Password' to create a password</label
+        >
+        <i class="bx bx-copy" id="copy-btn"></i>
+        <i class="bx bx-refresh" id="refresh-btn"></i>
+      </div>
+      <div class="charlength-div">
+        <label for="length-slider"
+          >Password Length: <span id="length-value">12</span></label
+        >
+        <input type="range" id="length-slider" min="12" max="32" value="12" />
+      </div>
+      <div class="mid-div">
+        <label class="switch">
+          <input type="checkbox" id="uppercase" checked />
+          <span class="slider"></span>
+          <span class="label-text">Uppercase Letters</span>
+        </label>
+        <br />
+        <label class="switch">
+          <input type="checkbox" id="lowercase" checked />
+          <span class="slider"></span>
+          <span class="label-text">Lowercase Letters</span>
+        </label>
+        <br />
+        <label class="switch">
+          <input type="checkbox" id="numbers" checked />
+          <span class="slider"></span>
+          <span class="label-text">Numbers</span>
+        </label>
+        <br />
+        <label class="switch">
+          <input type="checkbox" id="symbols" checked />
+          <span class="slider"></span>
+          <span class="label-text">Symbols</span>
+        </label>
+      </div>
+      <div class="bot-div">
+        <button id="generate-btn">Generate Password</button>
+      </div>
     </main>
-    <scrip src="script.js"></scrip>
+    <script src="script.js"></script>
   </body>
 </html>
