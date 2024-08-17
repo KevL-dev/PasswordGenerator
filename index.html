@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Password Generator</title>
   </head>
   <body>
@@ -11,10 +15,10 @@
       <div class="top-div">
         <h2>Generated password</h2>
         <label id="password-display"
-          >Click 'Generate' to create a password</label
+          >Click 'Generate Password' to create a password</label
         >
-        <button id="copy-btn">Copy</button>
-        <button id="refresh-btn">Refresh</button>
+        <i class="bx bx-copy" id="copy-btn"></i>
+        <i class="bx bx-refresh" id="refresh-btn"></i>
       </div>
       <div class="charlength-div">
         <label for="length-slider"
@@ -23,17 +27,29 @@
         <input type="range" id="length-slider" min="12" max="32" value="12" />
       </div>
       <div class="mid-div">
-        <label
-          ><input type="checkbox" id="uppercase" checked /> Uppercase
-          Letters</label
-        ><br />
-        <label
-          ><input type="checkbox" id="lowercase" checked /> Lowercase
-          Letters</label
-        ><br />
-        <label><input type="checkbox" id="numbers" checked /> Numbers</label
-        ><br />
-        <label><input type="checkbox" id="symbols" checked /> Symbols</label>
+        <label class="switch">
+          <input type="checkbox" id="uppercase" checked />
+          <span class="slider"></span>
+          <span class="label-text">Uppercase Letters</span>
+        </label>
+        <br />
+        <label class="switch">
+          <input type="checkbox" id="lowercase" checked />
+          <span class="slider"></span>
+          <span class="label-text">Lowercase Letters</span>
+        </label>
+        <br />
+        <label class="switch">
+          <input type="checkbox" id="numbers" checked />
+          <span class="slider"></span>
+          <span class="label-text">Numbers</span>
+        </label>
+        <br />
+        <label class="switch">
+          <input type="checkbox" id="symbols" checked />
+          <span class="slider"></span>
+          <span class="label-text">Symbols</span>
+        </label>
       </div>
       <div class="bot-div">
         <button id="generate-btn">Generate Password</button>

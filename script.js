@@ -43,7 +43,10 @@ function generatePassword() {
 
 document.getElementById("copy-btn").addEventListener("click", function () {
   const password = document.getElementById("password-display").textContent;
-  if (password === "" || password === "Click 'Generate' to create a password")
+  if (
+    password === "" ||
+    password === "Click 'Generate Password' to create a password"
+  )
     return;
 
   navigator.clipboard.writeText(password).then(
