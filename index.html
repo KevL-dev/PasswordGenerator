@@ -10,12 +10,35 @@
     <main>
       <div class="top-div">
         <h2>Generated password</h2>
-        <label></label>
+        <label id="password-display"
+          >Click 'Generate' to create a password</label
+        >
+        <button id="copy-btn">Copy</button>
+        <button id="refresh-btn">Refresh</button>
       </div>
-      <div class="charlength-div"></div>
-      <div class="mid-div"></div>
-      <div class="bot-div"></div>
+      <div class="charlength-div">
+        <label for="length-slider"
+          >Password Length: <span id="length-value">12</span></label
+        >
+        <input type="range" id="length-slider" min="12" max="32" value="12" />
+      </div>
+      <div class="mid-div">
+        <label
+          ><input type="checkbox" id="uppercase" checked /> Uppercase
+          Letters</label
+        ><br />
+        <label
+          ><input type="checkbox" id="lowercase" checked /> Lowercase
+          Letters</label
+        ><br />
+        <label><input type="checkbox" id="numbers" checked /> Numbers</label
+        ><br />
+        <label><input type="checkbox" id="symbols" checked /> Symbols</label>
+      </div>
+      <div class="bot-div">
+        <button id="generate-btn">Generate Password</button>
+      </div>
     </main>
-    <scrip src="script.js"></scrip>
+    <script src="script.js"></script>
   </body>
 </html>
